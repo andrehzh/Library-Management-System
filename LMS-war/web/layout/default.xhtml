@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <h:outputStylesheet name="css/default.css" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>
+            <ui:insert name="title">Title</ui:insert> 
+        </title>
+    </h:head>
+    <h:body styleClass="page" >
+        <div id="layout-container">
+            <h:outputStylesheet name="css/default.css" />
+            <div id="top">
+                <nav id="navlink-container">
+                    <a class="topbarLink" href="homePage.xhtml">Home</a>
+                    <a class="topbarLink" href="viewAllMembers.xhtml">View All Members</a>
+                    <a class="topbarLink" href="viewAllBooks.xhtml">View All Books</a>
+                    <a class="topbarLink" href="viewAllRecords.xhtml">View All Lend Records</a>
+                </nav>
+                <h:form id="logout-button-container">
+                    <h:commandButton class="logout-button" value="Logout" action="${authenticationManagedBean.logout}"/>
+                </h:form>
+            </div>  
+            <div id="content">
+                <ui:insert name="content">Content</ui:insert> 
+            </div>
+         </div>
+    </h:body>
+</html>

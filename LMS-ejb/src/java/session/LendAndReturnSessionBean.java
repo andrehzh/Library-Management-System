@@ -20,6 +20,7 @@ import java.text.ParseException;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -197,20 +198,20 @@ public class LendAndReturnSessionBean implements LendAndReturnSessionBeanLocal {
 
     @Override
     public BigDecimal calculateFineAmount(Date currentDate, Date lendDate) {
-        long diff = Math.abs(currentDate.getTime() - lendDate.getTime());
-        long days = diff / (1000*60*60*24);
-        BigDecimal fineAmount = new BigDecimal((days-14) * 0.50);        
-        return fineAmount;
+        long days = TimeUnit.DAYS.convert(Math.abs(currentDate.getTime() - lendDate.getTime()), TimeUnit.MILLISECONDS);
+        return BigDecimal.valueOf(Math.max(0, days - 14) * 0.50);
     }
     
     @Override
-    public BigDecimal retrieveFineAmountForRecord(Long recordId, Date currentDate) throws LendingNotFoundException, BookNotFoundException, MemberNotFoundException, BookAlreadyReturnedException {
-        LendAndReturn record = this.retrieveLendingRecordById(recordId);
-        Date lendDate = record.getLendDate();    
-        if (record.getReturnDate() != null) {
-            throw new BookAlreadyReturnedException();
+    public BigDecimal retrieveFineAmountForRecord(long lendId, Date returnDate) throws LendingNotFoundException, BookNotFoundException, MemberNotFoundException, BookAlreadyReturnedException {
+        LendAndReturn record = retrieveLendingRecordById(lendId);
+        BigDecimal fine = calculateFineAmount(record.getLendDate(), returnDate);
+
+        if (fine.compareTo(BigDecimal.ZERO) > 0) { 
+            record.setFineAmount(fine);
+            return fine;
         } else {
-            return calculateFineAmount(currentDate, lendDate);
+            return BigDecimal.ZERO;
         }
     }
     

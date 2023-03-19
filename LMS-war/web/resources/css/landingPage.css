@@ -1,0 +1,118 @@
+body {
+    background-color: #1a1a1a;
+    font-size: 14px;
+    font-family: "Trebuchet MS", sans-serif;
+    color: #f0f0f0;
+    margin: 10px;
+}
+
+h1 {
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+    color: #20c997;
+}
+
+a.sidebarLink, a.navLinks {
+    color: #f0f0f0;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.3em;
+    font-family: "Trebuchet MS", sans-serif;
+    padding-left: 2em;
+}
+
+a.sidebarLink:hover, a.navLinks:hover {
+    color: #20c997;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 1.3em;
+    font-family: "Trebuchet MS", sans-serif;
+    padding-left: 2em;
+    border-radius: 10px;
+}
+
+a.navLinks {
+    padding-left: 0em;
+    margin-bottom: 1em;
+}
+
+a.navLinks:hover {
+    padding-left: 0em;
+    color: #f0f0f0;
+}
+
+#j_idt10 {
+    border-width: 0px;
+}
+
+#j_idt12 {
+    border-width: 0px;
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-bottom: 5em;
+    padding-top: 3em;
+    height: 100vh;
+    border-radius: 10px;
+    background-color: #282828;
+}
+
+.sidebarPanel .ui-widget-content {
+    background-color: #333333;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    padding: 1em;
+}
+
+body {
+    padding-left: 20vw;
+    padding-top: 10vh;
+    padding-bottom: 15vh;
+    padding-right: 10vw;
+}
+
+#landing-page-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    margin-top: 20vh;
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.7em;
+    color: #f0f0f0;
+}
+
+img {
+    height: 60vh;
+    width: 60vw;
+}
+
+.login {
+    align-items: center;
+    background-image: #333333;
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-size: 1.5em;
+    font-weight: bold;
+    justify-content: center;
+    max-width: 100%;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+}

@@ -50,7 +50,7 @@ public interface LendAndReturnSessionBeanLocal {
 
     public BigDecimal calculateFineAmount(Date currentDate, Date lendDate);
 
-    public BigDecimal retrieveFineAmountForRecord(Long recordId, Date currentDate) throws LendingNotFoundException, BookNotFoundException, MemberNotFoundException, BookAlreadyReturnedException;
+    public BigDecimal retrieveFineAmountForRecord(long lendId, Date returnDate) throws LendingNotFoundException, BookNotFoundException, MemberNotFoundException, BookAlreadyReturnedException;
 
     public void returnBookNotLate(Long recordId, Date returnDate) throws LendingNotFoundException, BookNotFoundException, MemberNotFoundException, BookAlreadyReturnedException;
 

@@ -1,0 +1,65 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    width: 25vw;
+    height: 25vh;
+    outline: 1px solid #444;
+    border-radius: 10px;
+    margin-right: 2vw;
+    background-color: #2c3e50;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    margin-top: 7vh;
+    color: #f0f0f0;
+    font-size: 20px;
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 600;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2vh;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.homepage-button {
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
+    text-transform: none;
+    text-align: center;
+    text-decoration: none;
+    padding: 0.8rem 1.6rem;
+    margin: 1rem;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.homepage-button:active {
+    transform: translateY(2px);
+}
+
+.homepage-button:active {
+    opacity: .8;
+}

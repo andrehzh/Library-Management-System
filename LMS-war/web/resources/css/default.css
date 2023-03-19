@@ -1,0 +1,107 @@
+body {
+    background-color: #1a1a1a;
+    font-size: 14px;
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #f0f0f0;
+    margin: 10px;
+}
+
+h1 {
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    border-bottom: 1px solid #444;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+    color: #20c997;
+}
+
+a:link, a:visited {
+  color: #38a3f1;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:link:hover, a:visited:hover {
+  color: #38a3f1;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Additional styling for modern look */
+
+.login-panel, .register-panel {
+  background-color: #282828;
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 30px auto;
+  max-width: 400px;
+}
+
+input, select {
+  border-radius: 3px;
+  padding: 5px;
+  background-color: #2e2e2e;
+  color: #f0f0f0;
+  border: 1px solid #444;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+input[type="submit"], button {
+  background-color: #20c997;
+  border-color: #20c997;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+input[type="submit"]:hover, button:hover {
+  background-color: #17a589;
+  border-color: #17a589;
+}
+
+input[type="submit"]:active, button:active {
+  background-color: #149f7a;
+  border-color: #149f7a;
+}
+
+#navlink-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;
+}
+
+.topbarLink {
+    font-size: 1.2rem;
+    color: #f0f0f0;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.topbarLink:hover {
+    background-color: #20c997;
+    color: #fff;
+}
+
+.logout-button {
+    font-size: 1rem;
+    color: #f0f0f0;
+    background-color: #20c997;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.logout-button:hover {
+    background-color: #17a589;
+}
+
